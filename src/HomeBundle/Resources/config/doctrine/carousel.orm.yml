@@ -1,0 +1,18 @@
+HomeBundle\Entity\carousel:
+    type: entity
+    table: null
+    repositoryClass: HomeBundle\Entity\carouselRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        path:
+            type: string
+            length: 255
+        text:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

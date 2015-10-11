@@ -1,0 +1,62 @@
+#tuba, #cor, #trombonne, #trompette {
+	height: 50px;
+	width: 50px;
+	margin-top: 50%;
+}
+
+#coralie {
+	height:30%;
+	width: 20%;
+	
+}
+
+body {
+	background-image: url('../images/pistons3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#presentation {
+	margin-top:  -2%;
+	height: 500px;
+	background-image:linear-gradient(#FFDE61, #000);
+	opacity: 0.9;
+}
+
+@font-face {
+font-family: 'Luna';
+src: url('../font/Luna.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+#titre {
+	padding-top: 2%;
+	text-align: center;
+	font-family: 'Luna';
+}
+
+#pre {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding-bottom: 25px;
+	color: white;
+	font-size: 16px;
+} 
+
+#imagePres {
+	height: 400px;
+	width: 400px;
+	border-radius: 10px;
+}
+
+.bio {
+	background-color: rgba(0, 0, 0, 0.8);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: white;
+}
+
+.formules {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}

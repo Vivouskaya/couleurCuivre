@@ -1,0 +1,203 @@
+{% block Head %}
+
+  {% block Style %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  {% endblock %}
+
+  {% block Script %}
+    
+    <script src="//code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="{{ asset('js/carousel.js') }}"></script>
+
+  {% endblock Script %}
+
+{% endblock Head %}
+
+{% block Body %}
+<body>
+
+      
+       <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div id="presentation" class="item active">
+          <h1 id="titre">Couleur Cuivre</h1>
+            <img class="first-slide" src="{{ asset('images/bandeau.png') }}" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                
+              </div>
+            </div>
+          </div>
+          {% for c in carousel %}
+            <img class="first-slide" src="{{ asset('images/{{c.path}}') }}" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                {{c.text}}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div><!-- /.carousel -->
+      <div id="pre" class="col-md-12">
+      <br/>
+        <div class="col-md-6">
+        <p>
+          <span id="str"><strong><i>Couleur Cuivre</i></strong></span> est un ensemble de cuivres fondé par cinq musiciens qui se sont rencontrés au sein de l’Orchestre de l’Opéra de Massy.
+          <p>Une envie commune de valoriser leur famille d’instruments hors de l’orchestre les a décidés à former ce quintette.</p>
+
+          <p>Couleur Cuivre explore plus de quatre siècles de musique, de la Renaissance à notre époque, de Gabrielli à Gainsbourg…</p>
+        </p>
+        </div>
+        <div class="col-md-6">
+        <img id="imagePres" src="{{ asset ('images/pres1.jpg') }}"></img>
+        </div>
+      <br/>
+      </div>
+      <div class="col-md-12">
+         <div class="col-md-6 bio">  
+           <div class="col-md-3">  
+            <img class="icon" id="trombonne" src="{{ asset ('images/iconTrombonne.png') }}"></img>
+           </div>
+            <div id="TextTrombonne" class="col-md-9">
+              <p><strong>Coralie Parisis</strong>, trombone :<p>
+                  <p>
+                  1er Prix du CNSM de Paris, membre de l’Orchestre de la Police Nationale, Coralie participe régulièrement aux concerts
+                  de l’Orchestre de Paris, de l’Opéra de Paris…
+                </p>
+                <p>
+                  Soliste de l’Orchestre de l’Opéra de Massy, Coralie est professeur aux conservatoires de Palaiseau et d’Orsay.
+                </p>
+            </div>
+          </div>
+          <div class="col-md-6 bio">  
+          <div class="col-md-3">  
+            <img class="icon" id="tuba" src="{{ asset ('images/iconTuba.png') }}"></img>
+            </div>
+            <div id="TextTuba" class="col-md-9">
+                <p><strong>Thierry Debeaupte</strong>, tuba :</p>
+                <p>
+                1er Prix de Paris, Caen et Rouen, tuba solo de l’orchestre de la Police Nationale, il participe aux concerts de l’Opéra de Paris, de l’Orchestre de Paris…
+                </p>
+                <p>
+                Soliste de l’Orchestre de l’Opéra de Massy, Thierry est professeur au conservatoire à rayonnement départemental de Gennevilliers.
+                </p>
+            </div>
+          </div>
+      </div>
+
+        <div class="col-md-12">
+          <div class="col-md-6 bio">
+          <div class="col-md-3">  
+            <img class="icon" id="trompette" src="{{ asset ('images/iconTrompette.png') }}"></img>
+            </div>
+            <div id="TextTrompettes" class="col-md-9">
+                <p><strong>Ludovic Podevin</strong>, trompette :</p>
+                <p>
+                1er prix du CNSM de Paris, lauréat du concours de Moulins sur allier, membre de l’Orchestre de la Police Nationale.
+                Musicien supplémentaire de l’Orchestres de l’Opéra de Paris,de l’Orchestre National de France, de l’Orchestre National de Lille…
+                </p>
+                <p>
+                Soliste de l’Orchestre de l’Opéra de Massy, Ludovic est professeur aux conservatoires d’Aubergenville et Clermont.
+                </p>
+            
+                <p><strong>Gilles Akoka</strong>, trompette :</p>
+                      <p>
+                      1er Prix du CNSM de Paris, ex-trompette-solo de l’Orchestre Régional Provence Alpes Côte d’Azur de Cannes, ex-soliste de l’Orchestre Colonne,
+                      aujourd’hui trompettiste free-lance à Paris, membre invité du Mito Chamber Orchestra (Japon, dir. S. Ozawa).
+                      </p>
+                      <p>
+                      Musicien supplémentaire de l’Orchestre National de France, de l’Orchestre de Paris, de l’Opéra de Paris…
+                      </p>
+                      <p>
+                      Soliste de l’Orchestre de l’Opéra de Massy, Gilles est professeur aux conservatoires de Saint Maurice, Chilly Mazarin et Evry.
+                      </p>
+            </div>
+          </div>
+          <div class="col-md-6 bio">
+          <div class="col-md-3">  
+            <img class="icon" id="cor" src="{{ asset ('images/iconCor.png') }}"></img>
+            </div>
+            <div id="TextCor" class="col-md-9">
+            <p><strong>Norbert Vergonjanne</strong>, cor :</p>
+                  <p>
+                  1er Prix du CNR de Limoges, il se perfectionne auprès de J.J. Justafré (cor solo Orchestre Philharmonique de Radio-France).
+
+                  Corniste free-lance, il joue au sein de formations telles l’Orchestre National de France, de l’Orchestre de l’Opéra de Paris, l’Orchestre de Paris…</p>
+                  <p>
+                  Passionné de jazz, il participe a participé à de nombreuses créations avec Michel Legrand, Denis Leloup…
+                  Depuis 2006 il est arrangeur et soliste de "Huit et demi" (une nouvelle formation après JustA7 band).
+
+                  Soliste de l’Orchestre de l’Opéra de Massy, Norbert est professeur au conservatoire à rayonnement régional de Cergy Pontoise.
+                  </p>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      
+          <div class="col-md-12 formules">
+            <h3><strong>Nos Formules</strong></h3>
+          
+
+          <div class="col-md-6">
+            <p><strong>Couleur Cuivre propose différents programmes en fonction des publics auxquels ils s’adressent et des lieux  de concerts:</strong></p>
+
+            <p>
+              <p>
+                  Le large répertoire exploré par le quintette lui permet de s’intégrer aussi bien dans un festival baroque que dans une journée de musique populaire.
+              </p>
+              <p>
+                A côté de ces concerts "à la carte", Couleur Cuivre décline plusieurs programmes thématiques : église, opéra, chansons et airs populaires, musique de films, baroque...        
+              </p>
+              <p>
+                <strong>"église":</strong>  une heure de musique pour cuivres, traversant différentes époques, construite autour de la solennité et de l'acoustique du lieu.
+              </p>
+              <p>
+                <strong>"opéra":</strong>  ouvertures et airs célèbres du grand répertoire.
+              </p>
+              <p>
+                <strong>"on connaît la chanson":</strong>  programme-surprise d’environ une heure et trente minutes (entracte compris) constitué de mélodies, thèmes et chansons célèbres où Carmen côtoie les Beatles, où la Reine de la nuit répond à la Panthère rose, où Poinçonneur des lilas rime avec Alleluia…
+              </p>
+          </div>
+          <div class="col-md-6">
+            <strong>
+            Couleur Cuivre encadre et anime par ailleurs des actions pédagogiques en direction des écoles, des conservatoires et des pratiquants amateurs:</strong>
+            <p>
+            <p><strong>Concert éducatif :</strong></p> d’une durée d’environ une heure, ce concert pour les plus jeunes se compose d’un  programme sur mesure, d’une présentation-découverte et essai des instruments.
+            </p>
+            <p>
+            <p><strong>Mini stage d’une journée :</strong></p> Couleur Cuivre a sélectionné un répertoire pour ensemble de cuivres adapté aux différents niveaux de stagiaires. Le matin, concert de Couleur Cuivre (programme à la carte). L’après-midi, travail en groupes encadrés par les membres de Couleur Cuivre sur des œuvres choisies par niveau et préalablement préparées par les stagiaires. Les œuvres sont ensuite jouées lors d’un concert qui clôture  cette journée.
+            </p>
+            </p>
+        
+      </div>
+
+</body>
+{% endblock Body %}
