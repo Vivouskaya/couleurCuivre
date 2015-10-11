@@ -1,0 +1,48 @@
+{% block Head %}
+
+  {% block Style %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  {% endblock %}
+
+  {% block Script %}
+    
+    <script src="//code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="{{ asset('js/carousel.js') }}"></script>
+
+  {% endblock Script %}
+
+{% endblock Head %}
+
+<div class="col-md-12" style="margin-top: 2%;">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        
+        <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+              </div>
+              <div class="panel-body">
+                Panel content
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+              </div>
+              <div class="panel-body">
+                Panel content
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+</div>

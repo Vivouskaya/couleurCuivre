@@ -12,4 +12,10 @@ class HomeController extends Controller
 
         return $this->render('HomeBundle:Home:home.html.twig', array('carousel' => $carousel));
     }
+
+    public function adminAction()
+    {
+    	$carousel = null;
+        return $this->render('HomeBundle:Home:admin.html.twig', array('carousel' => $carousel));
+    }
 }
