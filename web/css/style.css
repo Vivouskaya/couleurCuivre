@@ -1,62 +1,177 @@
-#tuba, #cor, #trombonne, #trompette {
-	height: 50px;
-	width: 50px;
-	margin-top: 50%;
+@media screen and (max-width: 1000px) {
+ 
+ 		#tuba, #cor, #trombonne, #trompette {
+			height: 50px;
+			width: 50px;
+		}
+		
+		#coralie {
+			height:30%;
+			width: 20%;
+			
+		}
+		
+		body {
+			background-image: url('../images/pistons3.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			height: 100%;
+			width: 100%;
+		}
+		
+		#presentation {
+			margin-top:  -2%;
+			background-image:linear-gradient(#FFDE61, #000);
+			opacity: 0.9;
+		}
+		
+		
+		@font-face {
+			font-family: 'Luna';
+			src: url('../font/Luna.ttf');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		@font-face {
+			font-family: 'Steel';
+			src: url('../font/Poet.ttf');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		#titre {
+			padding-top: 2%;
+			text-align: center;
+			font-family: 'Luna';
+			font-size: 250%;
+		}
+		
+		#pre {
+			margin-top: 2%;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding-bottom: 25px;
+			color: white;
+			font-size: 16px;
+			display: block;
+			width: 95%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			font-family: 'Steel';
+		} 
+		
+		#imagePres {
+			height: 50%;
+			width: auto;
+			border-radius: 10px;
+		}
+		
+		.bio {
+			background-color: rgba(0, 0, 0, 0.8);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			color: white;
+			font-family: 'Steel';	
+		}
+		
+		.formules {
+			background-color: rgba(0, 0, 0, 0.8);
+			color: white;
+			font-family: 'Steel';
+		}
+ 
 }
 
-#coralie {
-	height:30%;
-	width: 20%;
-	
-}
 
-body {
-	background-image: url('../images/pistons3.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
 
-#presentation {
-	margin-top:  -2%;
-	height: 500px;
-	background-image:linear-gradient(#FFDE61, #000);
-	opacity: 0.9;
-}
 
-@font-face {
-font-family: 'Luna';
-src: url('../font/Luna.ttf');
-font-weight: normal;
-font-style: normal;
-}
-
-#titre {
-	padding-top: 2%;
-	text-align: center;
-	font-family: 'Luna';
-}
-
-#pre {
-	background-color: rgba(0, 0, 0, 0.7);
-	padding-bottom: 25px;
-	color: white;
-	font-size: 16px;
-} 
-
-#imagePres {
-	height: 400px;
-	width: 400px;
-	border-radius: 10px;
-}
-
-.bio {
-	background-color: rgba(0, 0, 0, 0.8);
-	margin-top: 5px;
-	margin-bottom: 5px;
-	color: white;
-}
-
-.formules {
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
+@media screen and (min-width: 1000px) {
+ 
+ 		body {
+			background-image: url('../images/pistons4.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			height: 100%;
+			width: 100%;
+		}
+		
+		#tuba, #cor, #trombonne, #trompette {
+			height: 75px;
+			width: 75px;
+			margin-top: 50%;
+		}
+		
+		#coralie {
+			height:30%;
+			width: 20%;
+		}
+		
+		#presentation {
+			margin-top:  -2%;
+			background-image:linear-gradient(#FFDE61, #000);
+		}
+		
+		@font-face {
+			font-family: 'Luna';
+			src: url('../font/Luna.ttf');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		@font-face {
+			font-family: 'Steel';
+			src: url('../font/Poet.ttf');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		#titre {
+			padding-top: 2%;
+			text-align: center;
+			font-family: 'Luna';
+			font-size: 350%;
+		}
+		
+		#pre {
+			margin-top: 2%;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding-bottom: 25px;
+			color: white;
+			font-size: 140%;
+			display: block;
+			width: 95%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			font-family: 'Steel';
+		} 
+		
+		#imagePres {
+			height: 400px;
+			width: 400px;
+			border-radius: 10px;
+		}
+		
+		.bio {
+			background-color: rgba(0, 0, 0, 0.8);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			color: white;
+			height: 350px;
+			width: 45%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			font-size: 140%;
+			font-family: 'Steel';
+		}
+		
+		.formules {
+			background-color: rgba(0, 0, 0, 0.8);
+			color: white;
+			font-size: 140%;
+			width: 95%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			font-family: 'Steel';
+		}
+ 
 }

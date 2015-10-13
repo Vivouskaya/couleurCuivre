@@ -8,14 +8,14 @@ class HomeController extends Controller
 {
     public function homeAction()
     {
-    	$carousel = null;
+    	$carousel = $this->getDoctrine() ->getRepository('HomeBundle:carousel')->findAll();
 
         return $this->render('HomeBundle:Home:home.html.twig', array('carousel' => $carousel));
     }
 
     public function adminAction()
     {
-    	$carousel = null;
+    	$carousel = $this->getDoctrine() ->getRepository('HomeBundle:carousel')->findAll();
         return $this->render('HomeBundle:Home:admin.html.twig', array('carousel' => $carousel));
     }
 }

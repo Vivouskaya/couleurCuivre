@@ -20,31 +20,38 @@
       
        <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide col-md-12" data-ride="carousel">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+	        <ol class="carousel-indicators">
+	          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	          <li data-target="#myCarousel" data-slide-to="1"></li>
+	          <li data-target="#myCarousel" data-slide-to="2"></li>
+	        </ol>
         <div class="carousel-inner" role="listbox">
           <div id="presentation" class="item active">
-          <h1 id="titre">Couleur Cuivre</h1>
-            <img class="first-slide" src="{{ asset('images/bandeau.png') }}" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption">
-                
-              </div>
-            </div>
+	          	<h1 id="titre">Couleur Cuivre</h1>
+	            <img id="imgSlide"  class="first-slide" src="{{ asset('images/bandeau.png') }}" alt="First slide">
+	            <div class="container">
+	              <div class="carousel-caption">
+	                
+	              </div>
+	            </div>
+            
           </div>
+          
           {% for c in carousel %}
-            <img class="first-slide" src="{{ asset('images/{{c.path}}') }}" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption">
-                {{c.text}}
-              </div>
-            </div>
+          
+          <div class="item">
+	          <img class="second-slide" src="{{ asset('images/{{c.path}}') }}" alt="Second slide">
+	          <div class="container">
+	            <div class="carousel-caption">
+	              <p>{{c.text}}</p>
+	            </div>
+	          </div>
+	        </div>
+          
           {% endfor %}
+          
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -55,21 +62,26 @@
           <span class="sr-only">Next</span>
         </a>
       </div><!-- /.carousel -->
+      
+      
+      
+      
       <div id="pre" class="col-md-12">
-      <br/>
-        <div class="col-md-6">
-        <p>
-          <span id="str"><strong><i>Couleur Cuivre</i></strong></span> est un ensemble de cuivres fondé par cinq musiciens qui se sont rencontrés au sein de l’Orchestre de l’Opéra de Massy.
-          <p>Une envie commune de valoriser leur famille d’instruments hors de l’orchestre les a décidés à former ce quintette.</p>
-
-          <p>Couleur Cuivre explore plus de quatre siècles de musique, de la Renaissance à notre époque, de Gabrielli à Gainsbourg…</p>
-        </p>
-        </div>
-        <div class="col-md-6">
-        <img id="imagePres" src="{{ asset ('images/pres1.jpg') }}"></img>
-        </div>
-      <br/>
+	      <br/>
+	        <div class="col-md-6">
+	        <p>
+	          <span id="str"><strong><i>Couleur Cuivre</i></strong></span> est un ensemble de cuivres fondé par cinq musiciens qui se sont rencontrés au sein de l’Orchestre de l’Opéra de Massy.
+	          <p>Une envie commune de valoriser leur famille d’instruments hors de l’orchestre les a décidés à former ce quintette.</p>
+	
+	          <p>Couleur Cuivre explore plus de quatre siècles de musique, de la Renaissance à notre époque, de Gabrielli à Gainsbourg…</p>
+	        </p>
+	        </div>
+	        <div class="col-md-6">
+	        <img id="imagePres" src="{{ asset ('images/pres1.jpg') }}"></img>
+	        </div>
+	      <br/>
       </div>
+      
       <div class="col-md-12">
          <div class="col-md-6 bio">  
            <div class="col-md-3">  
@@ -146,16 +158,6 @@
 
                   Soliste de l’Orchestre de l’Opéra de Massy, Norbert est professeur au conservatoire à rayonnement régional de Cergy Pontoise.
                   </p>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
             </div>
           </div>
         </div> 
